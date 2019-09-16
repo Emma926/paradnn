@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+# This file is modified from the original file:
+# https://raw.githubusercontent.com/tensorflow/tpu/master/models/official/resnet/resnet_model.py 
 """Contains definitions for the post-activation form of Residual Networks.
 Residual networks (ResNets) were proposed in:
 [1] Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun
@@ -239,6 +241,7 @@ def block_group(inputs, filters, block_fn, blocks, strides, is_training, name,
   return tf.identity(inputs, name)
 
 
+# Modified from the original file.
 def resnet_v1_generator(block_fn, layers, num_classes,
                         data_format='channels_first', filter_size=64):
   """Generator for ResNet v1 models.
@@ -304,6 +307,7 @@ def resnet_v1_generator(block_fn, layers, num_classes,
 
 def resnet_v1(layers, block_fn, num_classes, data_format='channels_first', filters=64):
   """Returns the ResNet model for a given size and number of output classes."""
+  # Modified from the original file.
   if block_fn == 'residual':
     block_fn = residual_block
   elif block_fn == 'bottleneck':

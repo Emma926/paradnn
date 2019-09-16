@@ -1,7 +1,8 @@
 data_type="bfloat16"
 platform="tpu"
 cnnblock='bottleneck'
-gcp_bucket="tpubenchmarking"
+# Add your GCP bucket
+gcp_bucket=""
 trace_dir=gs://${gcp_bucket}/${cnnblock}_${data_type}
 tmp_dir=gs://${gcp_bucket}/tmp/ 
 

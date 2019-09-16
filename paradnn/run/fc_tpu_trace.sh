@@ -1,7 +1,8 @@
 data_type="bfloat16"
 platform="tpu"
-gcp_bucket="tpubenchmarking"
-trace_dir=gs://${gcp_bucket}/fctest/ #fc_${data_type}
+# Add your GCP bucket
+gcp_bucket=""
+trace_dir=gs://${gcp_bucket}/fc_${data_type}
 tmp_dir=gs://${gcp_bucket}/tmp/ 
 
 

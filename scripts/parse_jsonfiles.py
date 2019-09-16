@@ -4,9 +4,9 @@ import copy
 import numpy as np
 import datetime
 
-trace_name= 'fc_trace_1.12'
+trace_name= sys.argv[1]
 
-input_path = '../tpu_trace/' + trace_name
+input_path = '../output/' + trace_name
 
 def read_json(f):
     with open(f, 'r') as infile:

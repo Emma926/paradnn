@@ -3,16 +3,17 @@ import sys
 import multiprocessing
 import tempfile
 
-trace_name= 'bottleneck_block_imagenet_trace_1.12'
+trace_name= sys.argv[1]
+bucket = sys.argv[2]
 
-download_path = '../trace_synbench/' + trace_name + '/'
+download_path = '../output/' + trace_name + '/'
 if not os.path.isdir(download_path):
   os.mkdir(download_path)
 else:
-  os.system('mv ' + download_path + ' ../trace_synbench/' + trace_name + '_old')
+  os.system('mv ' + download_path + ' ../output/' + trace_name + '_old')
   os.mkdir(download_path)
 
-gs_path = 'gs://tpubenchmarking/' + trace_name + '/'
+gs_path = 'gs://' + bucket + '/' + trace_name + '/'
 
 def do_work(wl):
   wl = wl.strip('\n')

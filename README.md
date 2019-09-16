@@ -22,26 +22,34 @@ Wang, Yu Emma, and Gu-Yeon Wei and David Brooks. "Benchmarking TPU, GPU, and CPU
 This repository also includes the analysis tools demonstrated in the paper.
 
 
-1. To test
+## Requirements
+```
+python >= 3.0
+TensorFlow >= 1.6
+```
+
+## Test
 ```
 python test.py --use_tpu $USE_TPU
 ```
 
-2.1 For example, to run FC models on CPUs, first modify the hyperparameter ranges in
+## Run on CPUs
+For example, to run FC models on CPUs, first modify the hyperparameter ranges in
 `paradnn/run/fc_cpu.sh`, and do
 ```
 cd paradnn/
 bash run/fc_cpu.sh
 ```
 
-2.2 To run FC models on TPUs, first modify the hyperparameter ranges in file
+## Run on TPUs
+To run FC models on TPUs, first modify the hyperparameter ranges in file
 `paradnn/run/fc_tpu.sh`, and do
 ```
 cd paradnn/
 bash run/fc_tpu.sh
 ```
 
-2.3 To run FC models on TPUs, first modify the hyperparameter ranges and `gcp_bucket` in file
+To collect TPU traces, first modify the hyperparameter ranges and `gcp_bucket` in file
 `paradnn/run/fc_tpu_trace.sh`, and do
 ```
 cd paradnn/
@@ -59,13 +67,13 @@ To parse the downloaded data
 bash parse_jsonfiles.py $trace_folder_name 
 ```
 
-3. To collect data
+## Collect performance data from execution logs
 ```
 cd ../scripts
 python get_perf.py
 ```
 
-4. To run the analysis tools
+## Run the analysis tools
 ```
 cd scripts/plotting
 jupyter notebook

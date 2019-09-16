@@ -17,6 +17,7 @@ Wang, Yu Emma, and Gu-Yeon Wei and David Brooks. "Benchmarking TPU, GPU, and CPU
   year={2019}
 }
 ```
+See [this link](https://arxiv.org/abs/1907.10701) for the PDF.
 
 
 This repository also includes the analysis tools demonstrated in the paper.

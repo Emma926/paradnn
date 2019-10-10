@@ -7,7 +7,9 @@ ParaDnn is a tool that generates parameterized deep neural network models.
 It provides large “end-to-end” models covering current and future applications, and parameterizing the models to explore a much larger design space of DNN model attributes.
 If you use paradnn for your project, please cite our paper:
 ```
-Wang, Yu Emma, and Gu-Yeon Wei and David Brooks. "Benchmarking TPU, GPU, and CPU Platforms for Deep Learning." arXiv preprint arXiv:1907.10701 (2019).
+Wang, Yu Emma, and Gu-Yeon Wei and David Brooks. 
+"Benchmarking TPU, GPU, and CPU Platforms for Deep Learning." 
+arXiv preprint arXiv:1907.10701 (2019).
 ```
 ```
 @article{wang2019benchmarking,

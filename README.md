@@ -25,6 +25,12 @@ See [this link](https://arxiv.org/abs/1907.10701) for the PDF.
 This repository also includes the analysis tools demonstrated in the paper.
 
 
+## Canonical Models
+ParaDnn generates three types of multi-layer models: fully-connected, convolutional, and recurrent
+models, summarized as below.
+
+[paradnnmodels](https://github.com/Emma926/paradnn/blob/master/paradnnmodels.png)
+
 ## Requirements
 ```
 python >= 3.0

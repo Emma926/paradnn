@@ -1,7 +1,7 @@
 data_type="float32"
 platform="cpu"
 outpath=../output/fc_${platform}_${data_type}
-mkdir $outpath
+mkdir -p $outpath
 
 
 use_tpu="False"

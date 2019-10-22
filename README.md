@@ -29,7 +29,7 @@ This repository also includes the analysis tools demonstrated in the paper.
 ParaDnn generates three types of multi-layer models: fully-connected, convolutional, and recurrent
 models, summarized as below.
 
-[paradnnmodels](https://github.com/Emma926/paradnn/blob/master/paradnnmodels.png)
+![paradnnmodels](https://github.com/Emma926/paradnn/blob/master/paradnnmodels.png)
 
 ## Requirements
 ```

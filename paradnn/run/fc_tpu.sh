@@ -11,14 +11,18 @@ then
   use_tpu="True"
 fi
 
+for layer in 4 
+do
 for node in 32 64 # 128 256 512 1024 2048 4096 8192
 do
-for layer in 4 # 8 16 32 64 128
+for input in 2000 
 do
-for bs in 64 #128 # 256 512 1024 2048 4096 8192 16384
+for output in 1000 
+do
+for bs in 64 128 # 256 512 1024 2048 4096 8192 16384
 do
 
-name=node_${node}-layer_${layer}-batchsize_${bs}
+name=layer_${layer}-node_${node}-input_${input}-output_${output}-bs_${bs}
 
 # skip the experiment if its performance report exists
 grep "examples/sec" $outpath/$name.err > tmp
@@ -35,6 +39,8 @@ python fc.py --use_tpu=${use_tpu} --tpu_name=${tpu_name} --data_type=${data_type
               --batch_size=${bs} --train_steps=100 \
               1>$outpath/$name.out 2>$outpath/$name.err
 
+done
+done
 done
 done
 done

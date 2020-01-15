@@ -1,4 +1,4 @@
-# paradnn (beta)
+# paradnn
 
 
 ![ParaDnn](https://github.com/Emma926/paradnn/blob/master/paradnn.png)

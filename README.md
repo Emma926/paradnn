@@ -35,7 +35,7 @@ models, summarized as below.
 ## Requirements
 ```
 python >= 3.0
-TensorFlow >= 1.6
+1.13 >= TensorFlow >= 1.6
 ```
 
 ## Test

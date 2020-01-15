@@ -2,6 +2,7 @@
 
 
 ![ParaDnn](https://github.com/Emma926/paradnn/blob/master/paradnn.png)
+[![DOI](https://zenodo.org/badge/208341435.svg)](https://zenodo.org/badge/latestdoi/208341435)
 
 ParaDnn is a tool that generates parameterized deep neural network models.
 It provides large “end-to-end” models covering current and future applications, and parameterizing the models to explore a much larger design space of DNN model attributes.

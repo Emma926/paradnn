@@ -40,7 +40,7 @@ python >= 3.0
 
 ## Test
 ```
-python test.py --use_tpu $USE_TPU
+python test.py --use_tpu=$USE_TPU
 ```
 
 ## Run on CPUs

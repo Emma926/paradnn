@@ -34,8 +34,21 @@ models, summarized as below.
 
 ## Requirements
 ```
-python >= 3.0
+python >= 3.7.6
 1.13 >= TensorFlow >= 1.6
+```
+
+## Environment
+Please refer to [TensorFlow installation guide](https://www.tensorflow.org/install/pip?lang=python3)
+for setting up virtual env. After that, please do
+```
+pip3 install --user --upgrade tensorflow==1.13.1
+pip3 install --upgrade google-api-python-client
+pip3 install --upgrade oauth2client
+pip3 install notebook
+pip3 install seaborn
+pip3 install matplotlib
+pip3 install sklearn
 ```
 
 ## Test

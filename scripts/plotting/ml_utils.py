@@ -182,7 +182,7 @@ def regression_all(labels_t, perf_t, labels_g, perf_g, labels_c=[], perf_c=[], x
     
 def classification(labels, speedups, order=1):
     x, y, features = create_training_data(labels, speedups, logistic=True, order = order)
-    print sum(y)*1.0/len(y)
+    print(sum(y)*1.0/len(y))
     regr = linear_model.LogisticRegression()
     regr.fit(x, y)
     coef = regr.coef_[0]

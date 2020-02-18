@@ -28,10 +28,10 @@ def get_range(labels, p=True):
     results = {}
     for i in range(len(keywords)):
       if p == True:
-        print keywords[i], sorted(list(values[i]))
+        print(keywords[i], sorted(list(values[i])))
       results[keywords[i]] = sorted(list(values[i]))
     if p == True:
-      print '-----------------------'
+      print('-----------------------')
     return results
 
 
@@ -56,7 +56,7 @@ def make_heatmap(labels, flops, dim=['node', 'layer', 'bs'], \
     matrix = []
     new = []
 
-    if r_new <> {}:
+    if r_new != {}:
       for k,v in r_new.iteritems():
         r[k] = v
     
@@ -161,7 +161,7 @@ Filter a dict of data based on range of hyperparameters specified by 'rule'.
 def filter_data(rule, data):
     keys = []
     new_data = {}
-    for k,v in data.iteritems():
+    for k,v in iter(data.items()):
         if k == 'err_jobs' or k == 'states':
             continue
         new_data[k] = []
@@ -314,8 +314,8 @@ def speedup_params(a_labels, a_perf, b_labels, b_perf, b_params, legend_box=(), 
         speedups.append(a_perf[i] / b_perf[ind])
         p.append(b_params[ind])
         l.append(label)
-    print 'length of speedups', len(speedups)
-    print max(speedups), min(speedups)
+    print('length of speedups', len(speedups))
+    print(max(speedups), min(speedups))
     fig, ax = plt.subplots(figsize=(3,3))
     if color == '':
       ax.plot(p, speedups, '.')
@@ -366,11 +366,11 @@ def speedup_params(a_labels, a_perf, b_labels, b_perf, b_params, legend_box=(), 
         else:
           new_labels.append(l)
 
-      if loc <> '':
+      if loc != '':
         ax.legend(handles, new_labels, loc=loc, frameon=True, ncol=ncol, fontsize=12)
       else:
         ax.legend(handles, new_labels, frameon=True, ncol=ncol, fontsize=12)
-      if legend_box <> ():
+      if legend_box != ():
          ax.legend(handles, new_labels, frameon=True, ncol=ncol, fontsize=12, bbox_to_anchor=legend_box)
     plt.tick_params(axis='both', which='major', labelsize=15)
     ax.set_xscale('log')
@@ -378,7 +378,7 @@ def speedup_params(a_labels, a_perf, b_labels, b_perf, b_params, legend_box=(), 
     left, right = ax.get_xlim()
     ax.set_xlim([left, right])
     ax.plot([left, right], [1, 1], 'k-', color='orange')
-    if lim <> []:
+    if lim != []:
       ax.set_ylim(lim)
     ax.set_xlabel('Params', fontsize = 25)
     ax.set_ylabel('Speedups', fontsize = 25)
@@ -437,7 +437,7 @@ def plot_roofline(f, ax, d, tpu_peak, membdw_peak, \
             if not n in hist:
                 hist[n] = 0    
             hist[n] += 1
-        for k,v in hist.iteritems():
+        for k,v in iter(hist.items()):
             hist[k] = v*1.0/len(labels)
         
         m = {}
@@ -450,7 +450,7 @@ def plot_roofline(f, ax, d, tpu_peak, membdw_peak, \
             l = labels[i]
             n = get_n_from_label(l, color_dim)
                     
-            if color_map <> {}:
+            if color_map != {}:
                 if n in color_map:
                     if n in m:
                       ax.plot(intensity[i], flops[i], '.', color=color_map[n], marker='.')
@@ -469,7 +469,7 @@ def plot_roofline(f, ax, d, tpu_peak, membdw_peak, \
                         color=mycolors[m[n]], label = n, 
                         #markeredgecolor='black', markeredgewidth=0.5, 
                         marker='.')
-        if color_dim <> 'op':
+        if color_dim != 'op':
             handles, ls = ax.get_legend_handles_labels()
             ls = [int(i) for i in ls]
             ls, handles = zip(*sorted(zip(ls, handles), key=lambda t: t[0]))
@@ -552,7 +552,7 @@ def plot_twodim(label1, perf1, label8, perf8, same_lim=True, color_dim='', xlabe
               else:
                 ax.plot(perf1[i], perf8[ind], '.', color=l_colors[m[n]])
 
-    if color_dim <> '':
+    if color_dim != '':
         handles, ls = ax.get_legend_handles_labels()
         ls = [int(i) for i in ls]
         ls, handles = zip(*sorted(zip(ls, handles), key=lambda t: t[0]))
@@ -564,7 +564,7 @@ def plot_twodim(label1, perf1, label8, perf8, same_lim=True, color_dim='', xlabe
     if same_lim:
         max_perf = max([max(perf1), max(perf8)])
         min_perf = min([min(perf1), min(perf8)])
-        if lim <> []:
+        if lim != []:
           max_perf = lim[1]
           min_perf = lim[0]
         ax.plot([min_perf,max_perf], [min_perf,max_perf], '--')
@@ -576,7 +576,7 @@ def plot_twodim(label1, perf1, label8, perf8, same_lim=True, color_dim='', xlabe
     plt.tick_params(axis='y', which='major', labelsize=11)
     plt.tick_params(axis='x', which='major', labelsize=11)
 
-    if lim <> []:
+    if lim != []:
       ax.set_xlim(lim)
       ax.set_ylim(lim)
     ax.set_title(title, fontsize=15)

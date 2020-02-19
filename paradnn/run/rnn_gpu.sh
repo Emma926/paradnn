@@ -28,7 +28,7 @@ name=layer_${layer}-maxlength_${maxlength}-vocabsize_${vocabsize}-embeddingsize_
 
 # skip the experiment if its performance report exists
 grep "examples/sec" $outpath/$name.err > tmp
-filesize=$(stat -c%s tmp)
+filesize=$(cat tmp | wc -c)
 if [ "${filesize}" -gt 0 ];
 then
   echo "skipping "$name

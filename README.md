@@ -20,7 +20,7 @@ The 3rd Conference on Machine Learning and Systems (MLSys) (2020).
   year={2020}
 }
 ```
-See [this link](https://arxiv.org/abs/1907.10701) for the PDF.
+See [this link](https://yuemmawang.github.io/publications/wang-mlsys2020.pdf) for the PDF.
 
 
 This repository also includes the analysis tools demonstrated in the paper.

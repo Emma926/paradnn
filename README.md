@@ -9,15 +9,15 @@ It provides large “end-to-end” models covering current and future applicatio
 If you use paradnn for your project, please cite our paper:
 ```
 Wang, Yu Emma, and Gu-Yeon Wei and David Brooks. 
-"Benchmarking TPU, GPU, and CPU Platforms for Deep Learning." 
-arXiv preprint arXiv:1907.10701 (2019).
+"A Systematic Methodology for Analysis of Deep Learning Hardware and Software Platforms." 
+The 3rd Conference on Machine Learning and Systems (MLSys) (2020).
 ```
 ```
-@article{wang2019benchmarking,
-  title={Benchmarking {TPU}, {GPU}, and {CPU} Platforms for Deep Learning},
+@inproceedings{wang2020systematic,
+  title={A Systematic Methodology for Analysis of Deep Learning Hardware and Software Platforms},
   author={Wang, Yu Emma and Wei, Gu-Yeon and Brooks, David},
-  journal={arXiv preprint arXiv:1907.10701},
-  year={2019}
+  booktitle={The 3rd Conference on Machine Learning and Systems (MLSys)},
+  year={2020}
 }
 ```
 See [this link](https://arxiv.org/abs/1907.10701) for the PDF.
